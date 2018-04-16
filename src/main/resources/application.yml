@@ -3,6 +3,4 @@ server:
 
 spring:
   datasource:
-    url: "jdbc:h2:mem:;DB_CLOSE_ON_EXIT=FALSE"
-
-spring.jpa.hibernate.ddl-auto: create-drop
+    url: "jdbc:h2:~/backendJava;"

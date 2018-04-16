@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - preConditions:
+    - runningAs:
+        username: SA
+
+  - changeSet:
+      id: 1
+      author: sweeneyb
+      changes:
+        - createTable:
+            tableName: ListItem
+            columns:
+              - column:
+                  name: id
+                  type: DateTime
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: isDone
+                  type: Boolean
+              - column:
+                  name: task
+                  type: varchar(50)

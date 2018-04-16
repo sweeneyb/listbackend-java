@@ -22,3 +22,14 @@ databaseChangeLog:
               - column:
                   name: task
                   type: varchar(50)
+
+  - changeSet:
+      id: addColumn-owner
+      author: sweeneyb
+      changes:
+      - addColumn:
+          columns:
+          - column:
+              name: owner
+              type: varchar(50)
+          tableName: ListItem

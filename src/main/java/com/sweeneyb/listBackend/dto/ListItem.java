@@ -1,8 +1,5 @@
 package com.sweeneyb.listBackend.dto;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
@@ -14,6 +11,8 @@ public class ListItem {
     @Id
     private LocalDateTime id = LocalDateTime.now();
     private String task = "";
+
+    private String owner = "";
 
     public ListItem() {}
 
@@ -44,6 +43,14 @@ public class ListItem {
 
     public void setTask(String task) {
         this.task = task;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 }
 

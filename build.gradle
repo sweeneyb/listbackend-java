@@ -30,6 +30,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.liquibase:liquibase-core')
 	compile('org.springframework.data:spring-data-rest-hal-browser')
+    compile('org.springframework.security:spring-security-web')
+    compile('org.springframework.security:spring-security-config')
 	runtime('com.h2database:h2')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')

@@ -8,16 +8,17 @@ databaseChangeLog:
       author: sweeneyb
       changes:
         - createTable:
-            tableName: ListItem
+            tableName: list_item
             columns:
               - column:
                   name: id
-                  type: DateTime
+                  type: Integer
+                  autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: isDone
+                  name: is_done
                   type: Boolean
               - column:
                   name: task
@@ -32,4 +33,4 @@ databaseChangeLog:
           - column:
               name: owner
               type: varchar(50)
-          tableName: ListItem
+          tableName: list_item

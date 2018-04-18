@@ -1,6 +1,8 @@
 package com.sweeneyb.listBackend.dto;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
 
@@ -9,7 +11,8 @@ public class ListItem {
 
     private boolean isDone = false;
     @Id
-    private LocalDateTime id = LocalDateTime.now();
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String task = "";
 
     private String owner = "";
@@ -29,11 +32,11 @@ public class ListItem {
         isDone = done;
     }
 
-    public LocalDateTime getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(LocalDateTime id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
